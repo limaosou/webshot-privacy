@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 · 狸猫截图 Webshot</title>
+<style>
+  :root{
+    --ink:#1a2330; --ink2:#3d4b5c; --muted:#6b7b8c;
+    --line:#e3e8ee; --bg:#ffffff; --soft:#f6f8fb; --brand:#0f766e;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.8 "PingFang SC","Microsoft YaHei","Segoe UI",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:760px;margin:0 auto;padding:56px 24px 96px}
+  header{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:32px}
+  .badge{display:inline-block;font-size:12.5px;font-weight:600;color:var(--brand);
+    background:#f0fdfa;border:1px solid #ccfbf1;border-radius:99px;padding:3px 11px;margin-bottom:14px}
+  h1{font-size:30px;line-height:1.35;margin:0 0 10px;letter-spacing:-.4px}
+  .meta{font-size:13.5px;color:var(--muted)}
+  h2{font-size:19px;margin:36px 0 10px;letter-spacing:-.2px}
+  h2 .num{color:var(--brand);font-weight:700;margin-right:8px}
+  p{margin:0 0 14px;color:var(--ink2)}
+  ul{margin:0 0 16px;padding-left:22px;color:var(--ink2)}
+  li{margin-bottom:8px}
+  .card{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:18px 0}
+  .card strong{color:var(--ink)}
+  table{width:100%;border-collapse:collapse;margin:14px 0 18px;font-size:14.5px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12.5px;color:var(--muted);font-weight:600;background:var(--soft)}
+  code{font-family:ui-monospace,Consolas,monospace;font-size:13.5px;background:var(--soft);
+    border:1px solid var(--line);border-radius:5px;padding:1px 5px}
+  hr{border:none;border-top:1px solid var(--line);margin:48px 0 32px}
+  .en h1{font-size:26px}
+  a{color:var(--brand)}
+  footer{margin-top:40px;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <span class="badge">狸猫截图 · Webshot</span>
+    <h1>隐私政策</h1>
+    <div class="meta">最后更新：2026 年 11 月 18 日 · 适用版本 1.0.0 及以后</div>
+  </header>
+
+  <div class="card">
+    <strong>一句话总结：</strong>这个扩展不收集、不上传、不分享你的任何数据。所有截图只存在于你自己的电脑上。
+  </div>
+
+  <h2><span class="num">1</span>我们不收集什么</h2>
+  <p>本扩展<b>没有</b>任何服务器端。我们把以下行为视为不存在：</p>
+  <ul>
+    <li>不上传你访问的网址、页面内容或截图；</li>
+    <li>不收集浏览历史、点击行为、设备信息或位置；</li>
+    <li>不包含任何统计、埋点、广告或第三方跟踪脚本；</li>
+    <li>不注册账号，不要求登录，不需要邮箱。</li>
+  </ul>
+
+  <h2><span class="num">2</span>截图数据存在哪里</h2>
+  <p>截图在浏览器本地生成，暂存在扩展的本地存储（<code>chrome.storage.local</code>）中，用于把画面传给标注编辑器。</p>
+  <ul>
+    <li>标注编辑器窗口关闭后，对应的截图数据会被删除；</li>
+    <li>超过 24 小时的临时截图会在扩展启动时自动清理；</li>
+    <li>你主动点击「PNG / JPG」保存的文件，写到你本机的下载目录，是否保留完全由你决定；</li>
+    <li>这些数据既不经过网络，也不存在任何云端副本。</li>
+  </ul>
+
+  <h2><span class="num">3</span>权限用途</h2>
+  <p>扩展申请的每一项权限都只用在下表描述的功能上，没有一项用于收集信息。</p>
+  <table>
+    <thead><tr><th>权限</th><th>用途</th></tr></thead>
+    <tbody>
+      <tr><td><code>activeTab</code></td><td>在你主动触发截图时，临时访问当前标签页以完成截取。不在任何网站常驻运行。</td></tr>
+      <tr><td><code>scripting</code></td><td>注入框选遮罩与滚动驱动脚本，实现区域选择与整页拼接。</td></tr>
+      <tr><td><code>storage</code></td><td>保存你的偏好设置（语言、文件命名规则、开关项）。</td></tr>
+      <tr><td><code>unlimitedStorage</code></td><td>整页长图单张可达数十 MB，普通存储配额不足。</td></tr>
+      <tr><td><code>downloads</code></td><td>把你编辑好的截图保存到下载目录。</td></tr>
+      <tr><td><code>clipboardWrite</code></td><td>点击「复制」时把图片写入剪贴板。仅写入，<b>不读取</b>剪贴板内容。</td></tr>
+      <tr><td><code>contextMenus</code></td><td>在网页右键菜单中提供截图入口。</td></tr>
+    </tbody>
+  </table>
+  <p>本扩展<b>不申请</b>任何网站访问权限（<code>host_permissions</code>），因此安装时不会出现「读取您在所有网站上的数据」这类提示。</p>
+
+  <h2><span class="num">4</span>许可证与付费功能</h2>
+  <p>当前版本<b>不包含</b>任何付费功能，也没有任何联网校验逻辑。设置中不显示许可证入口。</p>
+  <p>如果未来版本开放付费功能，届时会在此页面更新说明，并在联网校验前取得你的明确同意；校验只会传输许可证密钥本身，不包含任何截图或浏览数据。</p>
+
+  <h2><span class="num">5</span>儿童隐私</h2>
+  <p>本扩展不是面向 13 岁以下儿童设计的产品，也不会有意收集儿童的个人信息（实际上不收集任何人的信息）。</p>
+
+  <h2><span class="num">6</span>政策变更</h2>
+  <p>若本政策发生实质性变化，我们会在本页面更新「最后更新」日期，并在扩展的版本更新说明中提示。继续使用即表示接受更新后的政策。</p>
+
+  <h2><span class="num">7</span>联系方式</h2>
+  <p>对本政策有任何疑问，可通过以下方式联系开发者：</p>
+  <ul>
+    <li>邮箱：<a href="mailto:hi@qinghuali.com">hi@qinghuali.com</a></li>
+    <li>GitHub：<a href="https://github.com/limaosou" target="_blank" rel="noopener">github.com/limaosou</a></li>
+  </ul>
+
+  <hr>
+
+  <div class="en" lang="en">
+    <h1>Privacy Policy</h1>
+    <div class="meta">Last updated: November 18, 2026 · Applies to version 1.0.0 and later</div>
+
+    <div class="card">
+      <strong>In one sentence:</strong> this extension does not collect, upload, or share any of your data. Every screenshot stays on your own computer.
+    </div>
+
+    <h2>1. What we do not collect</h2>
+    <p>This extension has no backend server. Specifically, we do not:</p>
+    <ul>
+      <li>upload the pages you visit, their content, or your screenshots;</li>
+      <li>collect browsing history, click behavior, device information, or location;</li>
+      <li>include analytics, tracking pixels, advertising, or third-party scripts;</li>
+      <li>require an account, sign-in, or email address.</li>
+    </ul>
+
+    <h2>2. Where screenshots are stored</h2>
+    <p>Screenshots are generated locally and temporarily held in <code>chrome.storage.local</code> so they can be handed to the annotation editor.</p>
+    <ul>
+      <li>the data is deleted when the editor window closes;</li>
+      <li>temporary captures older than 24 hours are cleaned up on startup;</li>
+      <li>files you explicitly save go to your local Downloads folder and remain under your control;</li>
+      <li>none of it ever crosses the network, and no cloud copy exists.</li>
+    </ul>
+
+    <h2>3. Permissions</h2>
+    <table>
+      <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
+      <tbody>
+        <tr><td><code>activeTab</code></td><td>Temporary access to the current tab, only when you trigger a capture.</td></tr>
+        <tr><td><code>scripting</code></td><td>Injects the selection overlay and scroll driver.</td></tr>
+        <tr><td><code>storage</code></td><td>Stores your preferences (language, filename template, toggles).</td></tr>
+        <tr><td><code>unlimitedStorage</code></td><td>Full-page captures can reach tens of megabytes.</td></tr>
+        <tr><td><code>downloads</code></td><td>Saves the finished image to your Downloads folder.</td></tr>
+        <tr><td><code>clipboardWrite</code></td><td>Writes an image to the clipboard when you click Copy. It never reads the clipboard.</td></tr>
+        <tr><td><code>contextMenus</code></td><td>Adds capture entries to the page context menu.</td></tr>
+      </tbody>
+    </table>
+    <p>The extension requests <b>no host permissions</b>, so installation shows no "read your data on all websites" warning.</p>
+
+    <h2>4. Licensing and paid features</h2>
+    <p>This version contains no paid features and no online license check; no license field is shown in settings. If paid features ship later, this page will be updated beforehand and any online verification will send only the license key itself — never screenshots or browsing data.</p>
+
+    <h2>5. Children's privacy</h2>
+    <p>The extension is not directed to children under 13, and it collects no personal information from anyone.</p>
+
+    <h2>6. Changes</h2>
+    <p>Material changes will be reflected in the "Last updated" date above and noted in the extension's release notes.</p>
+
+    <h2>7. Contact</h2>
+    <p>Questions about this policy: <a href="mailto:hi@qinghuali.com">hi@qinghuali.com</a> · <a href="https://github.com/limaosou" target="_blank" rel="noopener">github.com/limaosou</a></p>
+  </div>
+
+  <footer>© 2026 狸猫截图 Webshot</footer>
+</div>
+</body>
+</html>
